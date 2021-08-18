@@ -108,20 +108,22 @@
       Attach an event listener to the input field in the page for console logging its value just after any keystroke.
       */
 
-      const inputField = document.getElementById("input-field");
+     console.log(document.getElementById("input-field"))
+     
+     
+     // ...
+     
+     /* EXERCISE 12
+     Create a new welcome alert message when the page successfully loads.
+     */
     
-      const changeText = function(){
-        console.log("event")
+    window.onload = function () {
+      alert("Welcome")
+      //const inputField = ;
 
-      }
-      // ...
-
-      /* EXERCISE 12
-      Create a new welcome alert message when the page successfully loads.
-      */
-
-      window.onload = function () {
-        alert("Welcome")
+      document.getElementById("input-field").addEventListener("input",function(event) {
+          console.log(event.target.value)
+        })
         //
       };
 
@@ -138,7 +140,7 @@
   </head>
   <body>
     <header>
-      <h1 onclick="makeItClickable()">This is the title of the page</h1>
+      <h1 style="cursor: pointer;" onclick="makeItClickable()">This is the title of the page</h1>
       <h2>This is the subtitle of the page</h2>
     </header>
 
@@ -173,7 +175,7 @@
     </main>
 
     <footer>
-      <p onclick="changeFooterText()" >And this text is just for the exercise too!</p>
+      <p style="cursor: pointer;" onclick="changeFooterText()" >And this text is just for the exercise too!</p>
     </footer>
   </body>
 </html>
